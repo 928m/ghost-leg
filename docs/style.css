@@ -140,6 +140,7 @@ button:focus {
 
 .game-step2 .user .text.on {
   box-shadow: 0 0 20px #f15e5e;
+  cursor: pointer;
 }
 
 .game-step2 .case .text.on {

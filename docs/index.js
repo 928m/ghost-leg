@@ -85,6 +85,7 @@ nextStepBtn.addEventListener('click', (ev) => {
       hasTextFormsValue = true;
       textForms.forEach((formEl) => {
         formEl.setAttribute('readonly','true');
+        formEl.style.cursor = 'pointer';
         nextStepBtn.style.display = 'none';
         resultBtn.style.display = 'inline-block';
       });

@@ -1,0 +1,297 @@
+* {
+  margin:0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  text-align: center;
+  background: #181818;
+  padding: 20px 0;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 #57e3fc, 6px 6px 0 #f15e5e;
+}
+
+.game-wrapper {
+  width: 100%;
+  height: 600px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.game-step1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  z-index: 10;
+  text-align: center;
+  background: #181818;
+}
+
+.game-step1 .inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-step1 .set-count-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.game-step1 button {
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: #181818;
+  background: #f5f5f5;
+  border: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all .3s;
+}
+
+.game-step1 button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 #f15e5e;
+  color: #f15e5e;
+}
+
+.game-step1 button.btn-start {
+  width: 120px;
+  border-radius: 0;
+  font-size: 15px;
+}
+.game-step1 button.btn-start:hover {
+  width: 170px;
+  background: #f15e5e;
+  color: #ffffff;
+}
+
+.game-step1 span {
+  display: inline-block;
+  color: #f5f5f5;
+  line-height: 50px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.game-step2 {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.game-step2 .btn-next-step:focus {
+  width: 120px;
+  box-shadow: 4px 4px 0 #f15e5e;
+}
+
+.game-step2 .btn-view-result {
+  background: #fc5858;
+  color: #ffffff;
+  border: 0;
+  margin: 0 0 30px;
+}
+
+.game-step2 .result-box {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ffffff;
+}
+
+.game-step2 .text {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 5px;
+  background: transparent;
+  color: #f15e5e;
+  border: 1px solid #f15e5e;
+  transition: all .5s;
+}
+
+.game-step2 .user .text.on {
+  box-shadow: 0 0 20px #f15e5e;
+}
+
+.game-step2 .case .text.on {
+  box-shadow: 0 0 20px #57e3fc;
+}
+
+.game-step2 .user {
+  position: relative;
+  z-index: 10;
+}
+
+.game-step2 .case {
+  position: relative;
+  z-index: 10;
+  margin: 0 0 20px;
+}
+
+.game-step2 .case .text {
+  color: #57e3fc;
+  border: 1px solid #57e3fc;
+}
+
+.game-step2 .user .complete,
+.game-step2 .case .complete {
+  color: #999999;
+  border: 0;
+  background: #202020;
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.game-step2 .ladder-wrap {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.game-step2 .ladder-wrap canvas {
+  position:  absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -500px;
+  background: #181818;
+}
+
+.game-step2 .ladder-wrap #ladderCanvas {
+  background: transparent;
+}
+.game-step2 p {
+  color: #ffffff;
+  padding: 10px;
+  margin: 0 0 20px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.game-step2 p:last-child {
+  margin-bottom: 0;
+}
+
+.game-step2 span {
+  display: inline-block;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.game-step2 span:before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid #ffffff;
+  border-right: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin: -2px 0 0 0;
+}
+
+.game-step2 button {
+  display: none;
+  width: 100px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.game-step2 button.on {
+  display: inline-block;
+}
+
+.game-step2 .user .complete.color0,
+.game-step2 .case .complete.color0,
+.game-step2 .result-box .color0 {
+  background: #c2ca4e
+}
+
+.game-step2 .user .complete.color1,
+.game-step2 .case .complete.color1,
+.game-step2 .result-box .color1 {
+  background: #fc5858
+}
+
+.game-step2 .user .complete.color2,
+.game-step2 .case .complete.color2,
+.game-step2 .result-box .color2 {
+  background: #f88b42
+}
+
+.game-step2 .user .complete.color3,
+.game-step2 .case .complete.color3,
+.game-step2 .result-box .color3 {
+  background: #f3be4c
+}
+
+.game-step2 .user .complete.color4,
+.game-step2 .case .complete.color4,
+.game-step2 .result-box .color4 {
+  background: #67f55a
+}
+
+.game-step2 .user .complete.color5,
+.game-step2 .case .complete.color5,
+.game-step2 .result-box .color5 {
+  background: #5bcfdf
+}
+
+.game-step2 .user .complete.color6,
+.game-step2 .case .complete.color6,
+.game-step2 .result-box .color6 {
+  background: #6e71fa
+}
+
+.game-step2 .user .complete.color7,
+.game-step2 .case .complete.color7,
+.game-step2 .result-box .color7 {
+  background: #db84fd
+}
+
+.game-step2 .user .complete.color8,
+.game-step2 .case .complete.color8,
+.game-step2 .result-box .color8 {
+  background: #24a59a
+}
+
+.game-step2 .user .complete.color9,
+.game-step2 .case .complete.color9,
+.game-step2 .result-box .color9 {
+  background: #af8c70
+}

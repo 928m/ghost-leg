@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+  <title>사다리게임</title>
+</head>
+<body>
+  <h3 class="title">game</h3>
+  <div class="game-wrapper">
+    <div class="game-step1">
+      <div class="inner">
+        <div class='set-count-area'>
+          <button class='minus'>-</button>
+          <span>2</span>
+          <button class='plus'>+</button>
+        </div>
+        <button class="btn-start">Start</button>
+      </div>
+    </div>
+    <div class="game-step2">
+      <div class="user"></div>
+      <div class="ladder-wrap">
+        <canvas id='canvas' width='1000' height='500'></canvas>
+        <canvas id='ladderCanvas' width="1000" height="500"></canvas>
+      </div>
+      <div class="case"></div>
+      <button class="btn-next-step on">next</button>
+      <button class="btn-view-result">result</button>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>
